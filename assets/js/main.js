@@ -8,7 +8,7 @@
  * Copilot was used to autocomplete the middle element.
  *
  */
-
+import "./components/ah-button.js";
 /* ------------------------------------------ Constants ----------------------------------------- */
 
 /**
@@ -100,7 +100,9 @@ const _switchView = (view) => {
         view = '';
     }
     let hash = routes[view]['hash'];
-    location.hash = hash;
+    if (location.hash.slice(2) != hash) {
+        location.hash = hash;
+    }
 };
 
 /**
@@ -108,6 +110,7 @@ const _switchView = (view) => {
  *
  */
 const _updateView = () => {
+    console.log('update');
     const route = getCurrentRoute();
     let title = route['title'];
     document.title = title;
@@ -129,8 +132,11 @@ const app = async () => {
         if (e.target.matches("[data-view]")) {
             e.preventDefault();
             _switchView(e.target.dataset.view);
-            _updateView();
         };
+    });
+    window.addEventListener("hashchange", () => {
+        _updateView();
+        console.log('updated');
     });
 };
 
