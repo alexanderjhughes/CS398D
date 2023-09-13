@@ -1,0 +1,14 @@
+{
+  "name": "My Server",
+  "host": "webpage.pacL;e.edu",
+  "protocol": "ftp",
+  "secure": "explicit",
+  "secureOptions": { "rejectUnauthorized": false },
+  "port": 21,
+  "username": "xh44822p",
+  "password": "Mount-XH2021",
+  "remotePath": "/",
+  "uploadOnSave": true,
+  "useTempFile": false,
+  "openSsh": false
+}
