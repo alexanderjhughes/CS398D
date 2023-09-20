@@ -17,6 +17,12 @@ class AHButton extends HTMLElement {
                     justify-content: center;
                     align-items: center;
                 }
+                .button:hover {
+                    background-color: rgb(0, 200, 255);
+                }
+                .button:active {
+                    background-color: rgb(135, 221, 255);
+                }
                 @media screen and (min-width: 768px) {
                     .button {
                         width: 10rem;

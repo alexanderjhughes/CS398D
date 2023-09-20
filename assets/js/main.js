@@ -30,6 +30,11 @@ const routes = {
         'title': 'AH - Project 1',
         'template': 'proj1.html',
     },
+    'proj2': {
+        'hash': '/proj2',
+        'title': 'AH - Project 2',
+        'template': 'proj2.html',
+    },
 };
 
 /* ------------------------------------------ Functions ----------------------------------------- */
@@ -70,9 +75,11 @@ const body = async () => {
     const route = getCurrentRoute();
     let template = route['template'];
     let title = route['title'];
-    const bodyHTML = await fetch(`./src/${template}`).then(r => r.text());
     let body = document.getElementById('app');
+    body.style.opacity = 0;
+    const bodyHTML = await fetch(`./src/${template}`).then(r => r.text());
     body.innerHTML = bodyHTML;
+    body.style.opacity = 1;
     document.title = title;
     return body;
 };
