@@ -35,6 +35,11 @@ const routes = {
         'title': 'AH - Project 2',
         'template': 'proj2.html',
     },
+    'class': {
+        'hash': '/class',
+        'title': 'Class',
+        'template': 'class.html',
+    },
 };
 
 /* ------------------------------------------ Functions ----------------------------------------- */
